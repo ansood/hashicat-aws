@@ -115,6 +115,8 @@ resource "aws_eip_association" "hashicat" {
   allocation_id = aws_eip.hashicat.id
 }
 
+#Added department tag
+
 resource "aws_instance" "hashicat" {
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = var.instance_type
@@ -132,7 +134,7 @@ resource "aws_instance" "hashicat" {
 }
 
 # We're using a little trick here so we can run the provisioner without
-# destroying the VM. Do not do this in production.
+# destroying the VM. Do not do this in production. 
 
 # If you need ongoing management (Day N) of your virtual machines a tool such
 # as Chef or Puppet is a better choice. These tools track the state of
