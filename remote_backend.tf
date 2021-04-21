@@ -7,7 +7,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "Cisco-SJC"
     workspaces {
-      name = "asd-hashicat-aws"
+      name = "hashicat-aws"
     }
   }
 }
